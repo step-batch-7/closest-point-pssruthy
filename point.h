@@ -18,5 +18,9 @@ typedef struct
   int y;
 }Point;
 
+#define LENGTH 5 
+#define FOOD_POINTS {{18, 76}, {19, 66}, {89, 57}, {9, 71}, {55, 38}}
+#define ORGANISM_LOCATION {18, 86}
+
 void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location);
 double distance_between_points(Point, Point);

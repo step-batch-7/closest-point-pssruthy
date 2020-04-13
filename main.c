@@ -3,10 +3,11 @@
 
 int main(void)
 {
-  Point food_points[5] = {{18, 76}, {19, 66}, {89, 57}, {9, 71}, {55, 38}};
-  Point current_location = {18, 86}, closest_food_location;
+  Point food_points[LENGTH] = FOOD_POINTS;
+  Point current_location = ORGANISM_LOCATION;
+  Point closest_food_location;
 
-  get_closest_food(food_points, 5, current_location, &closest_food_location);
+  get_closest_food(food_points, LENGTH, current_location, &closest_food_location);
   printf("Location of organism: [%d %d],  ", current_location.x, current_location.y);
   printf("Closest food target : [%d %d]\n", closest_food_location.x, closest_food_location.y);
 
